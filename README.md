@@ -17,10 +17,10 @@
 # SED Command Options
 
 delete some lines
-- based on line numbers
-sed -i -e '1d' passwd
-- string based delete
-sed -i -e '/nologin/ d' passwd
+    - based on line numbers
+        sed -i -e '1d' passwd
+    - string based delete
+        sed -i -e '/nologin/ d' passwd
 
 add some lines
 - sed -i -e '1 a Hello' -e '/monogd/ a Hello World' passwd
