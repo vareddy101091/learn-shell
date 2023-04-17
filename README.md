@@ -15,17 +15,25 @@
 10. SED Editor
 11. 
 
-# SED Command Options
+### SED Command Options
+```
+delete some lines 
+    - based on line numbers 
+        sed -i -e '1d' passwd 
+    - string based delete 
+        sed -i -e '/nologin/ d' passwd
 
-echo Hello World
+add some lines 
+    - sed -i -e '1 a Hello' -e '/monogd/ a Hello World' passwd 
+modify(change) some lines 
+    sed -i -e '2 c Hello Universe' -e '/centos/ c Hello Galaxy' passwd
 
-# Enable Color
-# Syntax - echo -e "\e[COLmMESSAGE\e[0m"
-# -e - enable \e (Enable color in echo command)
-# All the input should be there in quotes (Double quotes preferred)
-# \e - Enable a color
-# COLm - Color Code - Red(31m), Green(32m), Yellow(33m), Blue(34m), Magenta(35m), Cyan(36m)
-# \e[0m - Disable the color. (Once we enable the color we have to diable that, else color folloows to next lines)
 
-echo -e "\e[31mRED COLOR\e[0m"
-echo Normal Text
+delete some words 
+    sed -i -e 's|Hello||g' passwd 
+modify(substitute) some words 
+    sed -i -e 's|bin|BIN|g' passwd 
+    sed -i -e '10s|bin|BIN|g' passwd 
+Instead of | we can use / , ?, :, ;, #, @
+
+```
