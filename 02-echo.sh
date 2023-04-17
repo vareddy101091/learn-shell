@@ -9,4 +9,4 @@ echo Hello World
 # \e[0m - Disable the color. (Once we enable the color we have to diable that, else color folloows to next lines)
 
 echo -e "\e[31mRED COLOR\e[0m"
-echo Normal Text
+echo Normal Text.
