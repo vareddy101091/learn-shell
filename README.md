@@ -14,7 +14,7 @@
 9. Quotes
 10. SED Editor
 
-SED Command Options
+# SED Command Options
 delete some lines
 - based on line numbers
 sed -i -e '1d' passwd
